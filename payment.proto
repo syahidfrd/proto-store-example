@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package payment;
+
+option go_package = "paymentpb";
+
+message CreatePaymentRequest {
+    string order_id = 1;
+}
+
+message CreatePaymentResponse {
+    string payment_link = 1;
+}
+
+service PaymentService {
+    rpc CreatePayment(CreatePaymentRequest) returns (CreatePaymentResponse);
+}
