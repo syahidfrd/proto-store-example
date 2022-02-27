@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package payment;
 
-option go_package = "paymentpb";
+option go_package = "./;paymentpb";
 
 message CreatePaymentRequest {
     string order_id = 1;
